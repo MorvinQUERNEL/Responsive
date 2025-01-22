@@ -1,0 +1,230 @@
+:root {
+    font-size: 14px;
+    font-family: roboto;
+    --color-primery: #D9D9D9;
+    --color-second: black;
+    --box-shad1: 4px 4px 4px rgb(182, 182, 182);
+
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--color-second);
+    text-decoration: none;
+
+    &:hover {
+        color: red;
+    }
+}
+
+h2,
+h1 {
+    font-family: NCL;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid black;
+    background-image: url('images/audi.images/Audi_A7_Sportback_Genf_2018.jpg');
+    /* Image de fond */
+    background-size: cover;
+    /* Ajuste l'image pour qu'elle couvre tout le conteneur */
+    background-position: center;
+    /* Centre l'image */
+    background-repeat: no-repeat;
+    /* Empêche la répétition de l'image */
+    width: 100%;
+    /* Largeur de l'élément */
+    /* Hauteur de la fenêtre visible */
+    position: relative;
+    /* Position relative pour positionner des éléments par-dessus */
+    color: white;
+
+    #headnav {
+        padding: 15px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid var(--color-second);
+
+        h2 {
+            color: var(--color-second);
+        }
+
+        .burger-menu {
+            flex-direction: column;
+            gap: 5px;
+
+            span {
+                border: 2px solid black;
+                display: block;
+                width: 25px;
+                height: 0px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 5px;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 5px;
+                }
+
+
+            }
+
+        }
+
+        ul {
+            display: none;
+        }
+
+    }
+
+    #footnav {
+        ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                padding: 5px;
+                background-color: var(--color-primery);
+                border-radius: 5px;
+                box-shadow: var(--box-shad1);
+            }
+        }
+    }
+}
+
+main {
+    > :nth-child(odd) {
+        background-color: var(--color-primery);
+    }
+
+    .article-contenere {
+        display: grid;
+        text-align: center;
+
+        img {
+            border-radius: 15px 15px 0px 0px;
+            width: 100%;
+        }
+
+        h2 {
+            display: block;
+            margin: auto;
+        }
+
+        article {
+            background-color: white;
+            margin-inline: 10%;
+            box-shadow: var(--box-shad1);
+            margin-bottom: 15%;
+            padding-bottom: 7%;
+            border-radius: 15px;
+            border: 2px solid var(--color-primery);
+
+            p {
+                padding-inline: 5%;
+                text-align: left;
+            }
+
+            a {
+                padding: 5px;
+                background-color: var(--color-primery);
+                border-radius: 5px;
+                box-shadow: var(--box-shad1);
+            }
+        }
+    }
+
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr 50% 1fr;
+        padding-bottom: 5%;
+
+        h2 {
+            margin: auto;
+            grid-column: 1 / -1;
+        }
+
+        form {
+            margin-inline: 5%;
+            grid-column: 2;
+            text-align: left;
+
+            input:not([type=checkbox]),
+            select,
+            textarea {
+                display: block;
+                width: 100%;
+                border: 0;
+                margin-bottom: 3%;
+            }
+
+            button {
+                display: block;
+                margin: auto;
+                padding: 5px;
+                border: 0;
+                background-color: #ffffff;
+                border-radius: 5px;
+                box-shadow: var(--box-shad1);
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    header {
+        #headnav {
+            .burger-menu {
+                display: none;
+            }
+
+            ul {
+                margin-right: 25px;
+                display: flex;
+                gap: 50px;
+            }
+        }
+
+        #footnav {
+            ul {
+                justify-content: center;
+                gap: 100px;
+            }
+        }
+    }
+
+    .article-contenere {
+        grid-template-columns: repeat(2, 1fr);
+
+        article {
+            div {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+        h2 {
+            margin-bottom: 20px;
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .article-contenere {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

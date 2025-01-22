@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'copyduck';
+    src: url(fonts/Copyduck.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NCL';
+    src: url(fonts/NCLMonsterBeast-Demo.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIM';
+    src: url(fonts/DIMIS___.TTF);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OXA';
+    src: url(fonts/Oxanium-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'TEK';
+    src: url(fonts/Tektur-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}

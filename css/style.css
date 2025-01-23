@@ -20,6 +20,7 @@ a {
     }
 }
 
+
 h2,
 h1 {
     font-family: NCL;
@@ -84,6 +85,7 @@ header {
 
     #footnav {
         ul {
+            list-style: none;
             padding: 0;
             display: flex;
             justify-content: space-around;
@@ -115,9 +117,12 @@ main {
         h2 {
             display: block;
             margin: auto;
+            margin-block: 25px;
         }
 
         article {
+            display: flex;
+            flex-direction: column;
             background-color: white;
             margin-inline: 10%;
             box-shadow: var(--box-shad1);
@@ -208,6 +213,7 @@ footer {
 
         article {
             div {
+                height: 100%;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
@@ -222,7 +228,7 @@ footer {
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
 
     .article-contenere {
         grid-template-columns: repeat(4, 1fr);
